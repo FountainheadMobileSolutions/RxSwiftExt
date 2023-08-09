@@ -23,10 +23,10 @@ extension Observable where Element: ObservableType {
     public static func cascade<Sequence: Swift.Sequence>(_ observables: Sequence) -> Observable<Element.Element> where Sequence.Element == Element {
         let flow = Array(observables)
         if flow.isEmpty {
-            return Observable<Element.Element>.empty()
+            return .empty()
         }
 
-        return Observable<Element.Element>.create { observer in
+        return .create { observer in
             var current = 0, initialized = false
             var subscriptions: [SerialDisposable?] = flow.map { _ in SerialDisposable() }
 
