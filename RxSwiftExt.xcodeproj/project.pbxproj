@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -936,7 +936,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = RxSwiftCommunity;
 				TargetAttributes = {
 					188C6D901C47B2B20092101A = {
