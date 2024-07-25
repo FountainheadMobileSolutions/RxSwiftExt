@@ -14,8 +14,22 @@ let package = Package(
     .package(url: "https://github.com/FountainheadMobileSolutions/RxSwift.git", branch: "topic/xcode16"),
   ],
   targets: [
-    .target(name: "RxSwiftExt", dependencies: ["RxSwift", "RxCocoa"], path: "Source"),
-    .testTarget(name: "RxSwiftExtTests", dependencies: ["RxSwiftExt", "RxTest"], path: "Tests"),
+    .target(
+      name: "RxSwiftExt", 
+      dependencies: [
+        .product(name: "RxSwift", package: "RxSwift"),
+        .product(name: "RxCocoa",package: "RxSwift"),
+      ], 
+      path: "Source"
+    ),
+    .testTarget(
+      name: "RxSwiftExtTests", 
+      dependencies: [
+        .target(name: "RxSwiftExt"), 
+        .product(name: "RxTest",package: "RxSwift"),
+      ], 
+      path: "Tests"
+    ),
   ],
   swiftLanguageVersions: [.v5]
 )
