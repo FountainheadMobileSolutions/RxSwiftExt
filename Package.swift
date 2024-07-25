@@ -11,7 +11,7 @@ let package = Package(
     .library(name: "RxSwiftExt", targets: ["RxSwiftExt"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/FoundainheadMobileSolutions/RxSwift.git", branch: "topic/xcode16"),
+    .package(url: "https://github.com/FountainheadMobileSolutions/RxSwift.git", branch: "topic/xcode16"),
   ],
   targets: [
     .target(name: "RxSwiftExt", dependencies: ["RxSwift", "RxCocoa"], path: "Source"),
